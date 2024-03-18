@@ -44,7 +44,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from read_english_dictionary import get_words
 
 API_TOKEN = '7003670909:AAHW9sf_aO3hSAIjDfEfqJ61Nu8UBCmLgIs'
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=API_TOKEN, proxy='http://proxy.server:3128')
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
