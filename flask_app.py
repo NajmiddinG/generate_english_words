@@ -59,10 +59,10 @@ async def handle_all_messages(message: types.Message):
     letters = ''
     for i in message.text:
         if i.isalpha(): letters+=i
-    if 0<len(letters)<8:
+    if 1<len(letters):
         await message.reply(get_words(letters))
     else:
-        await message.reply("English harflari uzunligi 1-7 oralig'ida bo'lishi kerak!")
+        await message.reply("Pleese, send more letters!")
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
